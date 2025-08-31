@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <h1>All users</h1>
+    <form method="get" action="/user/new">
+      <button class="create">Add New Users</button>
+    </form>
+    <table>
+      <tr>
+        <th>No.</th>
+        <th>id</th>
+        <th>username</th>
+        <th>email</th>
+        <th colspan="2">Modify</th>
+      </tr>
+      <%for(user of data){%>
+      <tr>
+        <td><%=count++%></td>
+        <td><%=user.id %></td>
+        <td>@<%=user.username%></td>
+        <td><%=user.email%></td>
+        <td>
+            <form method="get" action="/user/<%=user.id%>/edit">
+               <button class="edit">Edit Details</button>
+            </form>
+        </td>
+        <td>
+          <form method="post" action="/user/<%=user.id%>?_method=DELETE">
+            <button class="delete">Delete User</button>
+          </form>
+        </td>
+    </tr>
+    <%}%>
+    </table>
+  </body>
+</html>
