@@ -1,0 +1,47 @@
+/* user.ejs style here */
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 1rem;
+}
+.edit {
+    cursor: pointer;
+    background-color: goldenrod;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
+
+/* edit.ejs style here */
+label {
+  font-size: 1.5rem;
+}
+input{
+    font-size: 1.2rem;
+}
+
+
+/* new.ejs style here */
+.create{
+     cursor: pointer;
+    background-color: blue;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
+
+.delete{
+    cursor: pointer;
+    background-color: red;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
